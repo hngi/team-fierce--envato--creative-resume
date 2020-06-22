@@ -8,16 +8,56 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
  <!--Title-->
  <title>Creative Resume</title>
     <link rel="icon" href="./assets/LOGO.png" size="32x32">
+    <!--Progress Bar style-->
+    <style>
+      .progress{   width: 150px;   height: 150px;    line-height: 150px;    background: none;    margin: 0 auto;    box-shadow: none;    position: relative;}
+.progress:after{   content: "";    width: 100%;    height: 100%;    border-radius: 50%;    border: 8px solid transparent;    position: absolute;    top: 0;    left: 0;}
+.progress > span{   width: 50%;    height: 100%;    overflow: hidden;    position: absolute;    top: 0;    z-index: 1;}
+.progress .progress-left{  left: 0;}
+.progress .progress-bar{    width: 100%;    height: 100%;   background: none;    border-width: 3px;    border-style: solid;    position: absolute;    top: 0;}
+.progress .progress-left .progress-bar{    left: 100%;    border-top-right-radius: 80px;   border-bottom-right-radius: 80px;    border-left: 0;    -webkit-transform-origin: center left;    transform-origin: center left;}
+.progress .progress-right{    right: 0;}
+.progress .progress-right .progress-bar{    left: -100%; border-top-left-radius: 80px;    border-bottom-left-radius: 80px;    border-right: 0;    -webkit-transform-origin: center right;    transform-origin: center right;    animation: loading-1 1.8s linear forwards;}
+.progress .progress-value{    width: 60%;     height: 60%;     top: 20%;     position: absolute;    left: 20%;  border-radius: 50%;      text-align: center;   background: #ffffff52;
+  font-size: 16px;     color: white;     line-height: 100px;}
+.progress.blue .progress-bar{    border-color: #af010b;}
+.progress.blue .progress-left .progress-bar{    animation: loading-2 1.5s linear forwards 1.8s;}
+
+@keyframes loading-1{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+@keyframes loading-2{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(144deg);
+        transform: rotate(144deg);
+    }
+}
+
+
+@media only screen and (max-width: 990px){
+    .progress{ margin-bottom: 20px; }
+}
+
+    </style>
   </head>
   <!--Hader Closes-->
   <!--Body-->
@@ -45,7 +85,7 @@
        <img src="./assets/LOGO.svg">
      </a>
      <p class="textnav">Find a creative</p>
-     <div class="container">
+     <div class="container box">
       <h3>Here</h3>
       <h1>ALLY <span>DESIGNS</span></h1>
     </div>
@@ -86,7 +126,7 @@
              Maecenas nec odioet ante tincidunt tempus luctus pulvinar,
              hendrerit id, lorem.</p>
          </div>
-         <div class=" col-sm-5">
+         <div class=" col-sm-5 mr-5">
          <h6> <img src="./assets/color_lens_24px.svg"> &nbsp;&nbsp;Arts</h6>
          <p>Nam quam nunc, blandit vel, luctus pulvinar, hend lorem.
             Maecenas nec odioet ante tincidunt tempus luctus pulvinar,
@@ -113,17 +153,57 @@
           </div>
         </div>
         </div>
-        <div class="text"><h3>Proficiencies</h3></div>
-      
-              <div class="progress blue">
-                <span class="progress-left">
-                  <span class="progress-bar"></span>
-                </span>
-                <span class="progress-right">
-                  <span class="progress-bar"></span>
-                </span>
-                <div class="progress-value">...gimme a sec</div>
+        <div class="about"><h3 class="text">Proficiencies</h3></div>
+        <div class="container mt-5  bars">
+          <div class="row">
+              <div class="col-md-3 col-sm-6 pr-5">
+                  <div class="progress blue">
+                      <span class="progress-left">
+                          <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right">
+                          <span class="progress-bar"></span>
+                      </span>
+                      <div class="progress-value">90%</div>
+                      <p>Photography</p>
+                  </div>
               </div>
+                  <div class="col-md-3 col-sm-6 pl-4">
+                      <div class="progress blue">
+                          <span class="progress-left">
+                              <span class="progress-bar"></span>
+                          </span>
+                          <span class="progress-right">
+                              <span class="progress-bar"></span>
+                          </span>
+                          <div class="progress-value">90%</div>
+                          <p>Web design</p>
+                      </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 pl-5">
+                    <div class="progress blue">
+                        <span class="progress-left">
+                            <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                            <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value">90%</div>
+                        <p>UI/UX DESIGN</p>
+                    </div>
+              </div>
+       
+              <div class="col-sm-1 media-links">
+                <p><i class="fa fa-twitter" aria-hidden="true"></i></p>
+                <p><i class="fa fa-youtube" aria-hidden="true"></i></p>
+                <P><i class="fa fa-linkedin" aria-hidden="true"></i></P>
+                <p><i class="fa fa-facebook" aria-hidden="true"></i></p>
+                <p><i class="fa fa-pinterest" aria-hidden="true"></i></p>
+              </div>
+            </div>
+          
+      </div>
+      </div>
 
            
         </section>

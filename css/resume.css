@@ -119,10 +119,7 @@ a.nav-link.page{
     padding-left: 90px;
     padding-bottom: 5px;
 }
-.media-link{
-    left: 15%;
-   
-}
+
 .container-fluid{
 margin-top: 1%;
 font-family: 'Poppins', sans-serif;
@@ -345,4 +342,67 @@ Page 4 begins*/
     width: 100%;
     height: 100%;
     color: white;
+}
+form{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.form-control:valid {
+    background-color:  transparent !important;
+  }
+  input:valid{
+      border: 2px solid white;
+      outline: none;
+  }
+  textarea:valid{
+      border: 2px solid white;
+  }
+  .btn.btn-block{
+      background: #AF010B;
+      color: white;
+  }
+  .media-link{
+      position: absolute;
+    left: 96%;
+    top: 25%
+  }
+@media only screen and (max-width: 768px){
+    form{
+        width: 100%;
+       
+    }
+}
+/*Footer*/
+footer{
+background:#e5e5e5;
+}
+footer h6 img{
+    margin-top: -5%;
+}
+footer .col-sm-4{
+    padding-top: 5%;
+    padding-left: 99px;
+}
+footer h6{
+    color: #000000;
+    font-weight: bold;
+    font-size: 30px;
+}
+footer p{
+    padding-top: 3%;
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+line-height: 29px;
+
+color: #000000;
+}
+.src{
+    font-weight: bold;
+    font-size: 19px;
 }
